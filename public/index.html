@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Countdown</title>
+    <!-- Tailwind -->
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/animation.css">
+    <!-- Font Montserrat -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="max-w-screen max-h-screen h-screen mx-auto bg-gray-400 overflow-hidden grid place-items-center">
+        <div id="info" class="text-center h-auto">
+            <div id="title" class="lg:transform lg:-translate-y-8">
+                <h1 class="font-bold text-2xl md:text-3xl lg:text-5xl">Tiempo faltante para:</h1>
+                <p class="font-semibold mt-4 text-xl md:text-2xl lg:text-4xl">Año nuevo</p>
+            </div>
+            
+            <div id="restant" class="flex items-center gap-3 mt-16 lg:mt-10">
+                
+                <div class="box md:p-10 lg:p-16" >
+                    <p id="days" class="font-semibold md:text-2xl lg:text-5xl"></p>
+                    <p class="sub-text md:bottom-3 lg:text-base">Dias</p>
+                </div><span class="md:text-4xl lg:text-5xl">:</span>
+
+                <div class="box md:p-10 lg:p-16">
+                    <p id="hours" class="font-semibold md:text-2xl lg:text-5xl"></p>
+                    <p class="sub-text md:bottom-3 lg:text-base">horas</p>
+                </div><span class="md:text-4xl lg:text-5xl">:</span>
+                
+                <div class="box md:p-10 lg:p-16">
+                    <p id="minutes" class="font-semibold md:text-2xl lg:text-5xl"></p>
+                    <p class="sub-text md:bottom-3 lg:text-base">minutos</p>
+                </div><span class="md:text-4xl lg:text-5xl">:</span>
+                
+                <div class="box md:p-10 lg:p-16">
+                    <p id="seconds" class="font-semibold md:text-2xl lg:text-5xl"></p>
+                    <p class="sub-text md:bottom-3 lg:text-base">segundos</p>
+                </div>
+            
+            </div>
+        </div>
+
+        <div id="animation" class="animation text-center text-3xl font-bold items-center gap-3 lg:text-5xl">
+            <div id="feliz" class="flex">
+                <div>F</div>
+                <div>E</div>
+                <div>L</div>
+                <div>I</div>
+                <div>Z</div>
+            </div>
+            
+            <div id="year" class="flex">
+                <div>A</div>
+                <div>Ñ</div>
+                <div>O</div>
+            </div>
+
+            <div id="nuevo" class="flex">
+                <div>N</div>
+                <div>U</div>
+                <div>E</div>
+                <div>V</div>
+                <div>O</div>
+            </div>
+        </div>
+        <a href="https://soyoswaldogg.github.io/oswaldo-gg/" target="_blank" rel="noopener noreferrer"  class="absolute bottom-4 right-4 underline">Oswaldo Gonzalez</a>
+    </div>
+
+    <script src="js/app.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+    font-family: 'Montserrat', sans-serif;;
+}
+
+
+.sub-text {
+   @apply text-xs absolute bottom-4 right-1 left-1
+}
+.box {
+    width: 70px;
+    height: 80px;
+    overflow: hidden;
+    @apply bg-gray-500 relative flex items-center justify-center mb-2 shadow-md rounded-md;
+}
+
