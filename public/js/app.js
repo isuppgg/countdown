@@ -18,7 +18,7 @@ const getRemainTime = deadline => {
         remainTime = (new Date(deadline) - now + 1000) / 1000,
         seconds = ('0' + Math.floor(remainTime % 60)).slice(-2),
         minutes = ('0' + Math.floor(remainTime / 60 % 60)).slice(-2),
-        hours = ('0' + Math.floor(remainTime / 3600 % 60)).slice(-2),
+        hours = ('0' + Math.floor(remainTime / 3600 % 24)).slice(-2),
         days = Math.floor(remainTime / (3600 * 24));
 
     return {
@@ -44,12 +44,16 @@ function mostrarTiempo(deadline) {
             dias.textContent = '0';
             horas.textContent = '0';
             minutos.textContent = '0';
-            segundos.textContent = '01';
-            setTimeout(() => {
-                segundos.textContent = '00';
-                restant.style.animation = 'move-time 4s forwards'
-                title.style.animation = 'disappear 1s 3s forwards'
-            }, 500);
+            segundos.textContent = '00';
+            
+            if(remainTime < 0) {
+                segundos.textContent = '01';
+                setTimeout(() => {
+                    segundos.textContent = '00';
+                    restant.style.animation = 'move-time 4s forwards'
+                    title.style.animation = 'disappear 1s 3s forwards'
+                }, 500);
+            }
             setTimeout(() => {
                 mostrarMensaje();
             }, 4500);
